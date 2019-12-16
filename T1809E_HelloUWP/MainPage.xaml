@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="T1809E_HelloUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T1809E_HelloUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Horizontal">
+        <StackPanel Margin="50">
+            <TextBlock>List Student</TextBlock>
+            <ListView x:Name="ListStudent"></ListView>
+        </StackPanel>
+        <StackPanel Margin="50">
+            <TextBlock>Student Form</TextBlock>
+            <TextBlock>RollNumber</TextBlock>
+            <TextBox x:Name="RollNumber"></TextBox>
+            <TextBlock>Full Name</TextBlock>
+            <TextBox x:Name="FullName"></TextBox>
+            <TextBlock>Gender</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton Tag="Male" Checked="ChooseGender">Male</RadioButton>
+                <RadioButton Tag="Famale" Checked="ChooseGender">Famale</RadioButton>
+                <RadioButton Tag="Other" Checked="ChooseGender">Other</RadioButton>
+            </StackPanel>
+            <TextBlock>Birthday</TextBlock>
+            <CalendarDatePicker Name="Birthday"></CalendarDatePicker>
+            <StackPanel Orientation="Horizontal">
+                <Button Click="Button_Click">Save</Button>
+                <Button>Reset</Button>
+            </StackPanel>
+
+        </StackPanel>
+       
+
+    </StackPanel>
+</Page>
